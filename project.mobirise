@@ -1,0 +1,1329 @@
+{
+  "settings": {
+    "name": "SemtaBilgisayar",
+    "currentPage": "bulutfonsemtabilgisayar.html",
+    "theme": {
+      "name": "blackamp",
+      "title": "BlackAMP",
+      "styling": {
+        "primaryColor": "#dd4f39",
+        "secondaryColor": "#ffde00",
+        "successColor": "#b2ccd2",
+        "infoColor": "#75818d",
+        "warningColor": "#767676",
+        "dangerColor": "#879A9F",
+        "mainFont": "Source Sans Pro",
+        "display1Font": "Roboto Condensed",
+        "display1Size": 4.5,
+        "display2Font": "Roboto Condensed",
+        "display2Size": 2.2,
+        "display5Font": "Delius",
+        "display5Size": 1.8,
+        "display7Font": "Delius",
+        "display7Size": 1.1,
+        "display4Font": "Delius",
+        "display4Size": 1,
+        "isRoundedButtons": false
+      },
+      "additionalSetColors": [
+        "#43818f",
+        "#d7eaef",
+        "#2e5058"
+      ]
+    },
+    "favicon": "",
+    "noImageResize": "true",
+    "google-analytics": "",
+    "siteUrl": "undefined",
+    "versionFirst": "4.6.5",
+    "uniqCompNum": 28,
+    "versionPublish": "4.6.5",
+    "path": "@PROJECT_PATH@",
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Anasayfa - Bulutfon Santral Kurulumu (Semta Bilgisayar - Semtabilgisayar)",
+        "meta_descr": "Bulutfon sanal santral\nSemtabilgisayar",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "_styles": {
+            "amp-sidebar": {
+              "min-width": "260px!important",
+              "z-index": "1050!important",
+              "background-color": "@menuBgColor"
+            },
+            "amp-sidebar.open:after": {
+              "content": "''",
+              "position": "absolute",
+              "top": "0",
+              "left": "0",
+              "bottom": "0",
+              "right": "0",
+              "background-color": "red"
+            },
+            ".open": {
+              "transform": "translateX(0%) !important",
+              "display": "block!important"
+            },
+            ".builder-sidebar": {
+              "background-color": "@menuBgColor",
+              "position": "relative",
+              "height": "100vh",
+              "z-index": "1030",
+              "padding": "1rem 2rem",
+              "max-width": "20rem"
+            },
+            ".headerbar": {
+              "display": "flex",
+              "flex-direction": "column",
+              "justify-content": "center",
+              "padding": ".5rem 1rem",
+              "min-height": "70px",
+              "align-items": "center",
+              "background": "@menuBgColor",
+              "&.sticky-nav": {
+                "position": "fixed",
+                "z-index": "1000",
+                "width": "100%"
+              }
+            },
+            "button.sticky-but": {
+              "position": "fixed"
+            },
+            ".brand": {
+              "display": "flex",
+              "align-items": "center",
+              "align-self": "flex-start",
+              "padding-right": "30px",
+              "p": {
+                "margin": "0",
+                "padding": "0"
+              }
+            },
+            ".brand-name": {
+              "color": "#ffffff"
+            },
+            ".sidebar": {
+              "padding": "1rem 0",
+              "margin": "0"
+            },
+            ".sidebar > li": {
+              "list-style": "none",
+              "display": "flex",
+              "flex-direction": "column"
+            },
+            ".sidebar a": {
+              "display": "block",
+              "text-decoration": "none",
+              "margin-bottom": "10px"
+            },
+            ".close-sidebar": {
+              "width": "30px",
+              "height": "30px",
+              "position": "relative",
+              "cursor": "pointer",
+              "background-color": "transparent",
+              "border": "none",
+              "&:focus": {
+                "outline": "2px auto @primaryColor"
+              },
+              "span": {
+                "position": "absolute",
+                "left": "0",
+                "width": "30px",
+                "height": "2px",
+                "border-right": "5px",
+                "background-color": "@hamburgerColor",
+                "&:nth-child(1)": {
+                  "transform": "rotate(45deg)"
+                },
+                "&:nth-child(2)": {
+                  "transform": "rotate(-45deg)"
+                }
+              }
+            },
+            "@media (min-width: 992px)": {
+              "& .brand-name": {
+                "min-width": "8rem"
+              },
+              "& .builder-sidebar": {
+                "margin-left": "auto",
+                ".sidebar li": {
+                  "flex-direction": "row",
+                  "flex-wrap": "wrap",
+                  "a": {
+                    "padding": ".5rem",
+                    "margin": "0"
+                  }
+                }
+              },
+              "& .builder-overlay": {
+                "display": "none !important"
+              }
+            },
+            ".hamburger": {
+              "position": "absolute",
+              "top": "25px",
+              "& when (@showLogo)": {
+                "@media (min-width: 768px)": {
+                  "top": "calc(0.5rem ~\"+\" @logoHeight ~\"*\" 0.5px ~\"-\" 10px)"
+                }
+              },
+              "right": "20px",
+              "margin-left": "auto",
+              "width": "30px",
+              "height": "20px",
+              "background": "none",
+              "border": "none",
+              "cursor": "pointer",
+              "z-index": "1000",
+              "&:focus": {
+                "outline": "none"
+              },
+              "span": {
+                "position": "absolute",
+                "right": "0",
+                "width": "30px",
+                "height": "2px",
+                "border-right": "5px",
+                "background-color": "@hamburgerColor",
+                "&:nth-child(1)": {
+                  "top": "0",
+                  "transition": "all .2s"
+                },
+                "&:nth-child(2)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(3)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(4)": {
+                  "top": "16px",
+                  "transition": "all .2s"
+                }
+              }
+            },
+            "amp-img": {
+              "height": "~\"@{logoHeight}px\"",
+              "width": "~\"@{logoWidth}px\"",
+              "margin-right": "1rem",
+              "display": "flex",
+              "align-items": "center",
+              "@media (max-width: 768px)": {
+                "max-height": "55px",
+                "max-width": "55px"
+              }
+            }
+          },
+          "_name": "menu1",
+          "_customHTML": "<section class=\"menu\" group=\"Menu\" plugins=\"amp-main,amp-sidebar\" global=\"\" once=\"menu\" always-top=\"\" position-absolute=\"\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked=\"\">\n        <input type=\"range\" title=\"Logo Height\" inline=\"\" name=\"logoHeight\" min=\"55\" max=\"220\" value=\"90\" step=\"1\">\n        <input type=\"range\" title=\"Logo Width\" inline=\"\" name=\"logoWidth\" min=\"55\" max=\"220\" value=\"220\" step=\"1\">\n\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\">\n        <input type=\"checkbox\" title=\"Show Links\" name=\"showLinks\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked=\"\">\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\">\n        <select title=\"Sidebar Side\" name=\"sidebarSide\">\n            <option value=\"left\">Left</option>\n            <option value=\"right\" selected=\"\">Right</option>\n        </select>\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#2e5058\">\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <nav class=\"headerbar\" mbr-class=\"{'sticky-nav':sticky}\">\n      <div class=\"brand\">\n          <span mbr-if=\"showLogo\" class=\"brand-logo\">\n              <amp-img src=\"@PROJECT_PATH@/assets/images/semtalogo2018-beyazkirmizi-1-2487x1070.png\" layout=\"responsive\" width=\"220.51678535096644\" height=\"96\" alt=\"Semtabiligsayar\">\n                  <a href=\"http://www.semtabilgisayar.com\"><img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/semtalogo2018-beyazkirmizi-1-2487x1070.png\" alt=\"Semtabiligsayar\" title=\"\"></a>\n              </amp-img>\n          </span>\n          <p mbr-text=\"\" mbr-theme-style=\"display-2\" mbr-if=\"showBrand\" class=\"brand-name mbr-fonts-style\" data-app-selector=\".brand-name\">SemtaBilgisayar</p>\n      </div>\n    </nav>\n    <amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n        <div class=\"builder-sidebar\" id=\"builder-sidebar\">\n            <button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n                <span></span>\n                <span></span>\n            </button>\n\n            <div mbr-menu=\"\" class=\"sidebar mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showLinks\"><a class=\"text-white\" href=\"index.html#header5-1\">ANASAYFA</a>\n              <a class=\"text-white\" href=\"index.html#features9-o\">FİYATLAR</a>\n              <a class=\"text-white\" href=\"index.html#footer4-9\">İLETİŞİM</a></div>\n            \n            <div mbr-if=\"showButtons\" mbr-buttons=\"\" mbr-theme-style=\"display-4\" class=\"navbar-buttons mbr-section-btn align-center\"><a class=\"btn btn-sm btn-success\" href=\"bulutfonbasvuru.html\">BAŞVURU</a></div>\n        </div>\n    </amp-sidebar>\n    <button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-class=\"{'sticky-but':sticky}\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n    </button>\n</section>",
+          "_cid": "qLCJP5FEoD",
+          "_anchor": "menu1-0",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-btn": {
+              "margin-bottom": "20px",
+              "width": "100%"
+            },
+            "amp-img": {
+              "width": "100%",
+              "height": "100%",
+              "text-align": "center",
+              "margin": "0 auto",
+              "object-fit": "cover",
+              "object-position": "center center"
+            },
+            "img": {
+              "height": "100%",
+              "object-fit": "cover",
+              "object-position": "center center"
+            },
+            "h1": {
+              "text-align": "left",
+              "color": "#ffffff",
+              "width": "100%"
+            },
+            ".text-col": {
+              "display": "flex",
+              "align-items": "flex-end",
+              "flex-direction": "column",
+              "padding-left": "4rem",
+              "padding-bottom": "2rem"
+            },
+            ".img-col": {
+              "padding": "0"
+            },
+            "div.mbr-text": {
+              "color": "#fff",
+              "max-width": "40%",
+              "padding-top": "6rem",
+              "@media (max-width: 1200px)": {
+                "max-width": "50%"
+              },
+              "p": {
+                "border-right": "2px #efefef solid",
+                "padding-right": "15px"
+              }
+            },
+            ".mbr-text": {
+              "color": "#ffffff",
+              "text-align": "right"
+            },
+            "@media (max-width: 992px)": {
+              "h1": {
+                "text-align": "center !important"
+              },
+              ".mbr-section-btn": {
+                "text-align": "center !important"
+              },
+              "div.mbr-text": {
+                "align-self": "center",
+                "p": {
+                  "border-right": "none",
+                  "text-align": "center !important",
+                  "padding-right": "0"
+                }
+              },
+              ".text-col": {
+                "padding-left": "0"
+              }
+            },
+            "@media (max-width: 768px)": {
+              "div.mbr-text": {
+                "max-width": "80%"
+              }
+            },
+            "h1, .mbr-section-btn": {
+              "text-align": "right"
+            }
+          },
+          "_name": "header5",
+          "_customHTML": "<section class=\"header5\" group=\"Headers\" plugins=\"amp-main\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n       \n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#43818f\" selected=\"\">\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-6 mbr-col-xl-5 text-col\">\n                <div class=\"mbr-text align-right\">\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Bulutfon Telekominikasyon sanal santrallerin tüm Türkiye'de dağıtımı ve kurulumu ile ilgili Semta Grup bünyesinde bulunan Semtabilgisayar ile anlaşmaya vardı. Grup bünyemizdeki Semtasoft ile ortaklaşa yürütülecek çalışmada inovasyon birinci önceliğimiz olacak.&nbsp;</p>\n                </div>\n                <h1 class=\"mbr-fonts-style align-center mbr-bold\" mbr-theme-style=\"display-1\" data-app-selector=\"h1, .mbr-section-btn\">Bulutfon Türkiye</h1>\n\n                <div class=\"mbr-section-btn align-left\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons=\"\" mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a> <a class=\"btn btn-md btn-success\" href=\"https://mobirise.com\">DOWNLOAD NOW</a></div>\n            </div>\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-6 mbr-col-xl-7 img-col\">\n                                <amp-img src=\"@PROJECT_PATH@/assets/images/bulutsemta5-1.jpg\" alt=\"Mobirise\" width=\"1127.0314136125653\" height=\"668\" layout=\"responsive\">\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/bulutsemta5-1.jpg\" alt=\"Mobirise\" title=\"\">\n                </amp-img>\n            </div>\n        </div>\n</section>",
+          "_cid": "qLCKrL6oeQ",
+          "_anchor": "header5-1",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-title": {
+              "padding-bottom": "1rem"
+            },
+            ".mbr-section-button": {
+              "padding-top": "1.5rem"
+            },
+            "H2": {
+              "color": "#43818f"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section content1\" group=\"Article\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <!-- <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\"> -->\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#d7eaef\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-container\">\n        <h2 mbr-if=\"showTitle\" class=\"align-center mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-1\">\n            0212.210.96.92</h2>\n        <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\"><i>Başvuru formu aracılığı ile veya telefonla bize ulaşabilirsiniz</i></h3>\n        <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n            <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n        </div>\n    </div>\n</section>",
+          "_anchor": "content1-r",
+          "_isUserblock": true,
+          "_cid": "qLIWN6Xwkc",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@flexDirection)": {
+              ".mbr-row": {
+                "flex-direction": "row-reverse"
+              }
+            },
+            ".text-block": {
+              "margin": "auto",
+              "& > *": {
+                "padding-right": "2rem",
+                "padding-left": "2rem"
+              }
+            }
+          },
+          "_name": "features13",
+          "_customHTML": "<section class=\"features13\" group=\"Features\" plugins=\"amp-main, amp-youtube\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"3\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"3\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Media on Left/Right\" name=\"flexDirection\">\n        <input type=\"text\" title=\"Youtube Video URL\" name=\"videoUrl\" value=\"http://www.youtube.com/watch?v=tbNVa5T44MI\">\n        \n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background6.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#b2ccd2\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n       \n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"video-block mbr-col-sm-12 mbr-col-md-6\">\n                <amp-youtube width=\"16\" height=\"9\" layout=\"responsive\" data-videoid=\"lBTCB7yLs8Y\">\n                </amp-youtube>\n            </div>\n            <div class=\"text-block mbr-col-sm-12 mbr-col-md-6\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-left mbr-white\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">BULUTFON Santral Sistemi Nedir?</h3>\n                <p class=\"mbr-fonts-style mbr-text align-left mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Bulutfon ile birkaç adımda, kurulum gerektirmeden, anında sanal santralinizi kullanmaya başlayabilirsiniz.</p>\n                <div class=\"mbr-section-btn align-left\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-sm btn-white-outline\" href=\"https://mobirise.com\">READ MORE</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qLD1jIMz6A",
+          "_anchor": "features13-3",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".underline": {
+              "padding-top": "1rem",
+              "padding-bottom": "1rem",
+              ".line": {
+                "width": "5rem",
+                "height": "3px",
+                "background": "@underlineColor",
+                "display": "inline-block"
+              }
+            },
+            ".mbr-row": {
+              "margin": "0 15px"
+            },
+            ".card": {
+              "padding-right": "10px !important",
+              "padding-left": "10px !important",
+              "@media (max-width: 991px)": {
+                "margin-bottom": "20px"
+              },
+              "display": "flex",
+              "-ms-flex-direction": "column",
+              "flex-direction": "column",
+              "min-width": "0",
+              "border-radius": "0",
+              "width": "100%",
+              "min-height": "1px",
+              ".card-wrapper": {
+                "background": "@cardBg",
+                "padding-top": "3rem",
+                "@media (max-width: 991px)": {
+                  "padding-top": "1rem"
+                },
+                "height": "100%"
+              },
+              "&:hover": {
+                ".card-img": {
+                  "-webkit-filter": "none",
+                  "-moz-filter": "none",
+                  "-ms-filter": "none",
+                  "-o-filter": "none",
+                  "filter": "none",
+                  "transition": "all .5s"
+                }
+              }
+            },
+            ".card-img": {
+              "& when (@grayFilter)": {
+                "-webkit-filter": "grayscale(100%)",
+                "-moz-filter": "grayscale(100%)",
+                "-ms-filter": "grayscale(100%)",
+                "-o-filter": "grayscale(100%)",
+                "filter": "gray"
+              }
+            },
+            ".card-img amp-img": {
+              "border-radius": "50%",
+              "width": "50%",
+              "margin": "auto"
+            },
+            ".card-img amp-img img": {
+              "border-radius": "50%"
+            },
+            ".card-subtitle": {
+              "letter-spacing": "3px",
+              "font-weight": "500"
+            },
+            ".card-title": {
+              "margin": "0",
+              "& when not (@showUnderline)": {
+                "padding-bottom": "1rem"
+              }
+            },
+            ".mbr-text": {
+              "margin": "0"
+            },
+            ".card-box": {
+              "padding": "2rem 2rem 3rem 2rem",
+              "@media (max-width: 991px)": {
+                "padding": "1rem 2rem"
+              }
+            }
+          },
+          "_name": "features9",
+          "_customHTML": "<section class=\"features9 mbr-section\" group=\"Features\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Show Specialty\" name=\"showSpecialty\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Name\" name=\"showName\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Underline\" name=\"showUnderline\" condition=\"showName\">\n        <input type=\"color\" title=\"Underline Color\" name=\"underlineColor\" value=\"#494949\" condition=\"showUnderline &amp;&amp; showName\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked=\"\">\n        <input type=\"checkbox\" title=\"Gray Filter\" name=\"grayFilter\" checked=\"\">\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected=\"\">4</option>\n        </select>\n        <input type=\"color\" title=\"Card BG\" name=\"cardBg\" value=\"#b2ccd2\">\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#efefef\" selected=\"\">\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"card mbr-col-sm-12 mbr-col-md-6\" mbr-class=\"{'mbr-col-lg-4': cardsAmount <= 3,\n                             'mbr-col-lg-3': cardsAmount > 3}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <amp-img src=\"@PROJECT_PATH@/assets/images/how-it-works-header-1-bbbd7c65c4028f5528bfbcec0937bd2e.gif\" layout=\"responsive\" width=\"125\" height=\"125\" alt=\"Mobirise\">\n                            <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/how-it-works-header-1-bbbd7c65c4028f5528bfbcec0937bd2e.gif\" alt=\"Mobirise\" title=\"\">\n                        </amp-img>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"mbr-fonts-style card-subtitle align-center\" mbr-theme-style=\"display-4\" data-app-selector=\".card-subtitle\" mbr-if=\"showSpecialty\">Premium</h4>\n                        <h3 class=\"card-title mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showName\" data-app-selector=\".card-title\"><b>\n                            59,00₺/aylık\n                        </b></h3>\n                        <div class=\"underline align-center\" mbr-if=\"showUnderline &amp;&amp; showName\">\n                             <div class=\"line\"></div>\n                        </div>\n                        <p class=\"mbr-text mbr-fonts-style align-center mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">25 Dahili \n<br>10 Adet Harici Telefon\n<br>SMS Var \n<br>Faks Var \n<br>Ses Kaydı Var \n<br>\n<br>Yıllık ödeme 2 ay tasarruflu</p>\n                    </div>\n                </div>\n            </div>\n            \n            <div class=\"card mbr-col-sm-12 mbr-col-md-6\" mbr-class=\"{'mbr-col-lg-4': cardsAmount <= 3,\n                             'mbr-col-lg-3': cardsAmount > 3}\" mbr-if=\"cardsAmount > 1\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <amp-img src=\"@PROJECT_PATH@/assets/images/how-it-works-header-2-bb1d8563cf8c1822f4398cc16dc4188e.gif\" layout=\"responsive\" height=\"125\" width=\"125\" alt=\"Mobirise\">\n                            <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/how-it-works-header-2-bb1d8563cf8c1822f4398cc16dc4188e.gif\" alt=\"Mobirise\" title=\"\">\n                        </amp-img>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"mbr-fonts-style card-subtitle align-center\" mbr-theme-style=\"display-4\" data-app-selector=\".card-subtitle\" mbr-if=\"showSpecialty\">Profesyonel</h4>\n                        <h3 class=\"card-title mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showName\" data-app-selector=\".card-title\"><b>\n                            49,00₺/aylık</b></h3>\n                        <div class=\"underline align-center\" mbr-if=\"showUnderline &amp;&amp; showName\">\n                             <div class=\"line\"></div>\n                        </div>\n                        <p class=\"mbr-text mbr-fonts-style align-center mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">10 Dahili \n<br>5 Adet Harici Telefon \n<br>SMS Var \n<br>Faks Var \n<br>Ses Kaydı Var \n<br>\n<br>Yıllık ödeme 2 ay tasarruflu</p>\n                    </div>\n                </div>\n            </div>\n        \n            <div class=\"card mbr-col-sm-12 mbr-col-md-6\" mbr-class=\"{'mbr-col-lg-4': cardsAmount <= 3,\n                             'mbr-col-lg-3': cardsAmount > 3}\" mbr-if=\"cardsAmount > 2\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <amp-img src=\"@PROJECT_PATH@/assets/images/how-it-works-header-3-cbfda88fa5211e74356a184eb74291bd.gif\" layout=\"responsive\" height=\"125\" width=\"125\" alt=\"Mobirise\">\n                            <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/how-it-works-header-3-cbfda88fa5211e74356a184eb74291bd.gif\" alt=\"Mobirise\" title=\"\">\n                        </amp-img>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"mbr-fonts-style card-subtitle align-center\" mbr-theme-style=\"display-4\" data-app-selector=\".card-subtitle\" mbr-if=\"showSpecialty\">Avantaj</h4>\n                        <h3 class=\"card-title mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showName\" data-app-selector=\".card-title\"><b>\n                            39,00₺/aylık</b></h3>\n                        <div class=\"underline align-center\" mbr-if=\"showUnderline &amp;&amp; showName\">\n                             <div class=\"line\"></div>\n                        </div>\n                        <p class=\"mbr-text mbr-fonts-style align-center mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">5 Dahili \n<br>2 Adet Harici Telefon \n<br>SMS Var \n<br>Faks Var  \n<br>Ses Kaydı Var  \n<br>\n<br>Yıllık ödeme 2 ay tasarruflu</p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card mbr-col-sm-12 mbr-col-md-6\" mbr-class=\"{'mbr-col-lg-4': cardsAmount <= 3,\n                             'mbr-col-lg-3': cardsAmount > 3}\" mbr-if=\"cardsAmount > 3\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <amp-img src=\"@PROJECT_PATH@/assets/images/how-it-works-header-4-e0509039d060e0d7c79643147e0c4e1b.gif\" layout=\"responsive\" height=\"125\" width=\"125\" alt=\"Mobirise\">\n                            <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/how-it-works-header-4-e0509039d060e0d7c79643147e0c4e1b.gif\" alt=\"Mobirise\" title=\"\">\n                        </amp-img>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"mbr-fonts-style card-subtitle align-center\" mbr-theme-style=\"display-4\" data-app-selector=\".card-subtitle\" mbr-if=\"showSpecialty\">Ekonomik</h4>\n                        <h3 class=\"card-title mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showName\" data-app-selector=\".card-title\"><b>\n                            29,00₺/aylık</b></h3>\n                        <div class=\"underline align-center\" mbr-if=\"showUnderline &amp;&amp; showName\">\n                             <div class=\"line\"></div>\n                        </div>\n                        <p class=\"mbr-text mbr-fonts-style align-center mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">2 Dahili \n<br>1 Adet Harici Telefon \n<br>SMS Var \n<br>Faks YOK \n<br>Ses Kaydı YOK \n<br>\n<br>Yıllık ödeme 2 ay tasarruflu</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "features9-o",
+          "_isUserblock": true,
+          "_cid": "qLIVwaf1uI",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".ampTabContainer": {
+              "display": "flex",
+              "flex-wrap": "wrap"
+            },
+            ".tab-button[selected]": {
+              "outline": "none",
+              "background": "@activeColor"
+            },
+            ".tab-button": {
+              "list-style": "none",
+              "flex-grow": "1",
+              "text-align": "center",
+              "cursor": "pointer"
+            },
+            ".tab-content": {
+              "display": "none",
+              "width": "100%",
+              "order": "1",
+              "border": "1px solid @activeColor",
+              "padding": "3rem",
+              "& when (@showTitle)": {
+                "padding-top": "2rem"
+              },
+              "p": {
+                "margin": "0",
+                "padding": "0"
+              },
+              "& when (@panelBg)": {
+                "background": "@panelColor"
+              }
+            },
+            ".tab-button[selected] + .tab-content": {
+              "display": "block"
+            },
+            "amp-selector": {
+              "padding": "1rem",
+              "margin": "1rem"
+            },
+            ".tab-head": {
+              "margin": "1rem"
+            },
+            "p": {
+              "color": "#ffffff"
+            },
+            ".mbr-section-title": {
+              "padding-bottom": "2rem"
+            },
+            "P": {
+              "color": "#2e5058"
+            }
+          },
+          "_name": "tabs2",
+          "_customHTML": "<section class=\"mbr-section tabs2\" group=\"Article\" plugins=\"amp-main, amp-bild, amp-selector, amp-carousel\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" name=\"activeColor\" value=\"#b2ccd2\">\n        <input type=\"checkbox\" title=\"Tab Panel Bg\" name=\"panelBg\" checked>\n        <input type=\"color\" title=\"Panel Color\" name=\"panelColor\" value=\"#b2ccd2\" condition=\"panelBg\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <select name=\"tabsAmount\" title=\"Tabs Amount\">\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\" selected>5</option>\n        </select>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <amp-selector role=\"tablist\" layout=\"container\" class=\"ampTabContainer\">\n            <div role=\"tab\" class=\"tab-button\" selected option=\"a\">\n                <h3 class=\"tab-head mbr-fonts-style\" mbr-theme-style=\"display-2\"><i>Nasıl Çalışır?</i></h3>\n            </div>\n            <div role=\"tabpanel\" class=\"tab-content\">\n                 <h2 class=\"mbr-section-title mbr-fonts-style align-center mbr-white\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\">\n                    KURULUM GEREKTİRMEZ</h2>\n                <p class=\"mbr-fonts-style align-center\" mbr-theme-style=\"display-7\">- Mevcut numaranızı Bulutfon'a taşıyın<br>- 0850’li veya sabit bir numara edinin.<br>- Departman ve dahililerinizi oluşturun.<br>- iPhone ya da Android cihazınızdan kullanın.<br>- Email ile faks gönderin ve alın.<br>- SMS, sesli mesaj gönderin.<br>- Fiziksel santral maliyetinden kurtulun.</p>\n            </div>\n\n            <div role=\"tab\" class=\"tab-button\" option=\"b\">\n                <h3 class=\"tab-head mbr-fonts-style\" mbr-theme-style=\"display-2\"><i>Kampanyalar</i></h3>\n            </div>\n            <div role=\"tabpanel\" class=\"tab-content\">\n                 <h2 class=\"mbr-section-title mbr-fonts-style align-center mbr-white\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\"><b>\n                    Telefon Numaraları</b></h2>\n                <p class=\"mbr-fonts-style align-center\" mbr-theme-style=\"display-7\"><b>0850’li Numaralar\n</b><br>Bulutfon sanal santraliniz ile birlikte ücretsiz olarak 0850 ile başlayan, konumdan bağımsız numaralar alabilirsiniz. 0850 alan kodu ile başlayan numaralar, coğrafi konum belirtmeyen, konumdan bağımsız hizmetler için kullanılır. 0850 numaralar, tüm Türkiye genelinde hizmet sunan şirketler tarafından, kurumsal bir görünüm elde etmek amacı ile tercih edilir.\n<br>\n<br><b>İl Bazında Numaralar\n</b><br>Bulutfon’dan bulunduğunuz ilin alan kodu ile başlayan numaralar tahsis edebilirsiniz.Üstelik herhangi bir sabit ücret veya tahsis ücreti ödemezsiniz. Numara tahsis edebileceğiniz. İllerimiz:\n<br>İstanbul, Ankara, İzmir, Denizli, Bursa, Muğla, Antalya, Diyarbakır, Kocaeli, Gaziantep, Adana, Eskişehir, Kayseri Aydın, Konya, Manisa, Samsun, Mersin, Sinop illerine ait alan kodları ile numara tahsis edebilirsiniz.\n<br>\n<br><b>Mevcut Numaranızı Taşıma</b>\n<br>Müşterileriniz tarafından bilinen, yıllardır kullandığınız numaranızı değiştirmek istemiyorsanız ve Bulutfon’nun olağanüstü özelliklerinden faydalanmak istiyorsanız, numaranızı değiştirmeden operatörünüzü değiştirebilirsiniz. Ücretsiz olarak sunulan numara taşıma hizmeti ile, gerekli evraklar tarafımıza ulaştıktan sonra süreç bizim tarafmızdan işletilir ve işlem tamamlandığında numaranız Bulutfon’da çalışmaya başlar.</p>         \n            </div>\n            <div role=\"tab\" class=\"tab-button\" option=\"c\" mbr-if=\"tabsAmount > 2\">\n                <h3 class=\"tab-head mbr-fonts-style\" mbr-theme-style=\"display-2\"><i>Özellikler</i></h3>\n            </div>\n            <div role=\"tabpanel\" class=\"tab-content\" mbr-if=\"tabsAmount > 2\">\n                 <h2 class=\"mbr-section-title mbr-fonts-style align-center mbr-white\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\"><b>\n                    PROFESYONEL SANTRAL</b></h2>\n                <p class=\"mbr-fonts-style align-center\" mbr-theme-style=\"display-7\"><b>Karşılama Menüsü\n</b><br>Karşılama menüleri yani robot operatörler (IVR) oluşturarak, şirketinizin kurumsal kimliğini ön plana çıkarabilir, şirketinizi arayanların, aradıkları birime kolayca ulaşmasını sağlayabilirsiniz. Bulutfon’da santralinize tanımlı her bir numara için farklı karşılama menüleri oluşturabilir, tuşları farklı karşılama menülerine aktararak sonsuz sayıda kombinasyon uygulayabilirsiniz. Müşterilerinize hızlı ve sağlıklı bilgi verebildiğiniz gibi, çalışanlarınızın iş yüklerini de azaltırsınız.\n<br>\n<br><b>Dahili Numaralar\n</b><br>Bulutfon’da tanımladığınız dahili numaralar kendi aralarında ücretsiz konuşurlar. Dahili numaraların tamamı konumdan bağımsız çalışır. Yani şirketinizin birden fazla ofisi bulunuyorsa, tek bir numarayı tüm ofislerinizde kullanabilir, tatilde, evde, dahası internet olan, dünyanın herhangi bir yerinde dahili numaranızı kullanabilirsiniz. Bulutfon’da santralinize tanımlı birden fazla numara var ise, her dahili dışarı doğru arama yaparken karşı tarafa hangi numaranın görüneceğini de siz seçersiniz.\n<br>\n<br><b>Bekleme Müzikleri\n</b><br>Bulutfon’da sizi aryan müşterileriniz çağrı başlayana kadar arka planda müzik dinlerler. Standart olarak ücretsiz gelen bu bekleme müziklerini müşterilerimiz eğer isterlerse Bulutfon yönetim arayüzünden değiştirebilir. Şirketinize ait bir jingle veya yaptığınız kampanyaları bekleme müziklerini değiştirerek, arayan müşterileriniz beklemedeyken onlara dinletebilirsiniz.\n<br>\n<br><b>Çağrı Grupları\n</b><br>Çağrı grupları, grup içerisinde tanımlı olan dahili numaraların, grup numarası arandığında aynı anda çalması özelliğidir. Bulutfon’da şirketinizde muhasebe, satış ve teknik destek gibi birimlerde görev yapan kişiler için ortak çağrı grupları oluşturabilir, karşılama menüsünde hedef olarak tanımlayabilir, arayan müşterilerinizin çağrı grupları sayesinde aradıkları birime en hızlı ve doğru şekilde ulaşmasını sağlayabilirsiniz. Ayrıca personeliniz de arayan müşterilerinizi doğru birimlere yönlendirmek için fazladan telefon görüşmesi yapması ve telefonda fazladan zaman harcamasına da gerek kalmaz.\n<br>\n<br><b>Limitsiz Dış Hat\n</b><br>Analog hatlardan farklı olarak Bulutfon’da, eş zamanlı birden fazla arama alabilir ve arama yapabilirsiniz. Üstelik birden fazla eş zamanlı arama almak veya yapmak için ayrı ayrı abonelikler, fazladan bir ücret ödemek zorunda kalmazsınız. Bu sayede sizi arayan müşterileriniz hiçbir zaman telefonunuzu meşgul duymayacaktır. Tüm dahili numaralarınız telefonla görüşmesi yapsa dahi, müşterileriniz sizi aramaya devam ettiklerinde bir dahili numara, müsait oluncaya kadar arka planda bekleme müziği dinler.\n<br>\n<br><b>Ses Kayıt Sistemi\n</b><br>Ses kayıt sistemi ile gelen ve giden tüm aramaları kayıt altına alabilir, hizmet kalitenizi takip edebilir veya müşterilerinizin güvenliğini sağlayabilirsiniz. Ayrıca tüm görüşme ses kayıtlarını bir yıla kadar sanal santralinizde saklayabilir, istediğiniz zaman kendi bilgisayarınızda indirerek arşivleyebilirsiniz. Bulutfon küçük paketi dışında kalan tüm paketlerde standart olarak ses kayıt sistemini sunmaktadır.\n<br>\n<br><b>3’lü Konferans\n</b><br>Bulutfon’da aynı anda 2 dahili numara ve bir harici numara konferans görüşmesi yapabilir. Bunun için konferans numarasına, bir çok santral komutunu ezberlemenize gerek yoktur. Üçlü konferans yapmak sadece iki numaradan ibarettir. Konferans görüşmesi yaparken normalden farklı bir ücretlendirme söz konusu olmaz.\n<br>\n<br><b>Mesai Saatleri\n</b><br>Bulutfon sanal santral sisteminde, eğer isterseniz haftalık çalışma günlerini ve mesai saat aralıklarını seçerek, mesai dışında sanal santralinizin gelen aramaları farklı şekillerde cevaplamasını sağlayabilirsiniz. Örneğin, mesai saatleri dışında farklı bir karşılama menüsü gelen aramaları karşılayabilir veya mesai saatleri dışında gelen aramaları sadece bir dahiliye yada çağrı grubuna yönlendirebilirsiniz.\n<br>\n<br><b>Arama Yönlendirme\n</b><br>Bulutfon sanal santral sisteminde, eğer isterseniz dahili numaranızı ulaşılamaz durumdayken (meşgul, kapalı veya cevap vermiyor ise) veya sürekli olarak, harici bir numaraya, farklı bir dahiliye, çağrı gurubuna yada bir karşılama menüsüne yönlendirebilirsiniz. Arama yönlendirme özelliği santral içi bir dahili, çağrı grubu veya karşılama menüsüne yönlendirilirken ücretsiz, harici bir numaraya yönlendirme yaparken ücretli olarak yapılmaktadır. Ücret, yönlendirilen numaranın konuşma tarifesi üzerinden ücretlendirilir.\n<br>\n<br><b>Arama Raporları\n</b><br>Diğer operatörlerden farklı olarak, detaylı arama raporu almak Bulutfon’da ücretsizdir. Aynı zamanda sanal santral yönetim panelinde arama raporları anlık olarak gösterilir. Arama raporlarını dahili, grup ve karşılama menüsü olarak görüntülenebilir, bu sayede arayanların, hangi yollar ile size bağlandığını görebilirsiniz. Bulutfon arama raporları oldukça fazla detay içermektedir, örneğin telefon görüşmesinde ilk önce telefonu kapatan tarafı dahi arama raporlarından görebilirsiniz.\n<br>\n<br><b>Sesli Mesaj Kutusu</b>\n<br>Sesli mesaj sistemi ile her zaman erişilebilir olursunuz. Bulutfon’da dahili numaranız arandığında cevap veremiyorsanız yada dahili numaranız çevirim dışı olduğunda sizi arayanlar sesli mesaj bırakabilirler. Bırakılan bu sesli mesajlar dahili numaranıza tanımlı e-posta adresinize WAV dosya formatında gönderilir. Eğer internet bağlantısının olmadığı bir ortamdaysanız kendi santralinizi arayarak, dahili numaranızı ve sesli mesaj şifrenizi girerek uzaktan da sesli mesajlarınızı dinleyebilirsiniz.</p>\n            </div>\n            <div role=\"tab\" class=\"tab-button\" option=\"d\" mbr-if=\"tabsAmount > 3\">\n                <h3 class=\"tab-head mbr-fonts-style\" mbr-theme-style=\"display-2\"><i>Faks-SMS</i></h3>\n            </div>\n            <div role=\"tabpanel\" class=\"tab-content\" mbr-if=\"tabsAmount > 3\">\n                 <h2 class=\"mbr-section-title mbr-fonts-style align-center mbr-white\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\"><b>Bulutfon, +1500 firmada, +3000 kullanıcıya +4500 numara ile hizmet vermektedir.</b></h2>\n                <p class=\"mbr-fonts-style align-center\" mbr-theme-style=\"display-7\"><b>Faks Gönderme\n<br></b>Bulutfon Santralinizden, herhangi bir fiziksel cihaza ihtiyaç duymadan faks gönderebilirsiniz. Üstelik faks özelliği ayrıca ücretlendirilmeyen bir servisimizdir. Faks gönderimi için yapılan arama, konuşma tarifesi üzerinden ücretlendirilir. Santralinize ekli her numara üzerinden faks gönderebilirsiniz.Birden fazla numaraya, tek gönderimde, toplu olarak faks gönderebilirsiniz.\n<br>\n<br><b>Faks Alma\n</b><br>Bulutfon Santralinizde tanımlı her numara üzerinden, herhangi bir ayar yapmadan, size gönderilen faksları otomatik olarak alabilirsiniz. Ayrıca santralinizde tanımlı, istediğiniz bir numarayı, sadece faks sinyali verecek şekilde ayarlayabilirsiniz.Numaranıza gönderilen fakslar, kullanıcı paneli üzerinden tanımlayabileceğiniz E- posta adresine gönderilir. İsterseniz kullanıcı panelimizden de gelen faksları görüntüleyebilirsiniz.\n<br>\n<br><b>E-posta ile Faks Gönderme</b>\n<br>Bulutfon’da, yetki verdiğiniz e-posta adresleri üzerinden e-posta atarak faks gönderebilirsiniz.<br><br><b>SMS Gönderme\n</b><br>Bulutfon’da, firmanızın kurumsal kimliğini temsil edecek SMS başlıkları oluşturarak, kişilere SMS gönderebilir,tanıtımlarınızı en etkili şekilde iletebilirsiniz.Ekonomik SMS paketlerimiz ile tanıtım maliyetlerinizi düşürürken,SMS başlıkları ile firmanızın prestijini arttırırsınız.\n<br>\n<br><b>Toplu SMS Gönderme\n</b><br>Toplu SMS ile firmanızın tanıtımlarını, ulaşmak istediğiniz kitlelere kolayca iletebilirsiniz.Kullanıcı panelinizden kişi listeleri içeren Excel dosyaları ile toplu SMS lerinizi kolayca gönderebilirsiniz.\n<br>\n<br><b>Bulut Tabanlı Alt Yapı\n</b><br>Bulutfon sanal santral sistemi bulut bilişim teknolojisini kullanır. Yatayda genişleyebilen sistemi sayesinde milyonlarca aboneye ulaşması durumunda dahi performansından asla ödün vermez. Bulut tabanlı olmasından dolayı fiziksel bir donanıma bağlı çalışmaz. Bu nedenle yüksek erişilebilirliği olan, güvenli bir hizmet alırsınız.\n<br>\n<br><b>Ölçeklendirilebilirlik\n</b><br>Bir çok operatörde kontör atış periyodu kavramı vardır, genellikle 60 saniye olan kontör atış periyodu, 61 saniyelik bir görüşmede sizin 120 saniye görüşme yaptığınızı varsayar. Bulutfon’da kontör atış periyodu bulunmaz, tüm görüşmeler saniyelik ücretlendirilir. Her yöne paketleri bulunmaz, herhangi bir paket için taahhüt vermeniz gerekmez. Bulutfon tam anlamı ile ölçeklendirilebilir bir hizmet sunar.<br></p>\n            </div>\n            <div role=\"tab\" class=\"tab-button\" option=\"e\" mbr-if=\"tabsAmount > 4\">\n                <h3 class=\"tab-head mbr-fonts-style\" mbr-theme-style=\"display-2\"><i>Fiyatlandırma</i></h3>\n            </div>\n            <div role=\"tabpanel\" class=\"tab-content\" mbr-if=\"tabsAmount > 4\">\n                 <h2 class=\"mbr-section-title mbr-fonts-style align-center mbr-white\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\"><b>\n                    FİYATLAR</b></h2>\n                <p class=\"mbr-fonts-style align-center\" mbr-theme-style=\"display-7\"><b>Uzun dönemli bir taahhüt var mıdır? \n<br></b>Hayır! Aylık paketlerde bir taahhüt yoktur. İstediğiniz zaman panelinizden iptal başvurusu yapabilirsiniz. İptal başvurusu yapılana kadar aylık ücretlendirme devam eder. Yıllık paketler ise bir yıllık taahhüt içerir. \n<br>\n<br><b>29 TL, 39 TL, 49 TL, 59 TL ile ne kadar konuşabilirim? \n<br></b>İlgili tutarlar sadece aylık sabit santral, faks, voice <i>mail </i>ücretleridir. Bulutfon’da konuşma ücretleri ihtiyaçlarınız doğrultusunda ayrıca yüklenir. Konuşma ücretlerine tarifeler sayfasından ayrıca bakabilirsiniz. \n<br>\n<br><b>İstediğim zaman iptal edebilir miyim? \n<br></b>İptal dilekçenizi yönetim panelimizden yüklemeniz yeterlidir. İptal ettirince numaralarınız, santralleriniz iptal olacaktır. Başka bir firmadan hizmet almak istiyorsanız numaralarınızı onlara taşıyabilirsiniz. İlgili firmanın numara taşıma sistemine dahil olması gerekmektedir. \n<br>\n<br><b>Abonelik için hangi belgeleri istiyorsunuz? \n<br></b>Bireysel kullanıcılardan kimlik fotokopisi, tüzel abonelerimizden imza yetkilisi olduğunu gösteren bir belgeyi panellerinden yüklemesi istenmektedir. Ayrıca tüm abonelerimizin, abonelik sözleşmesi ve numara tahsis formunu her sayfası imzalı bir şekilde doldurup gönderici ödemeli kargo ile bize göndermesi gerekmektedir. \n<br>\n<br><b>Hangi ödeme kanallarını kabul ediyorsunuz? \n<br></b>Bulutfon olarak debit ve kredi kartlarıyla ödeme kabul ediyoruz. PayPal ile şuan için ödeme kabul etmiyoruz. Yıllık ödemelerde ayrıca banka havalesini kabul ediyoruz.\n<br>\n<br><b>Faks Gönderme \n</b><br>Bulutfon Santralinizden, herhangi bir fiziksel cihaza ihtiyaç duymadan faks gönderebilirsiniz. Üstelik faks özelliği ayrıca ücretlendirilmeyen bir servisimizdir. Faks gönderimi için yapılan arama, konuşma tarifesi üzerinden ücretlendirilir. Santralinize ekli her numara üzerinden faks gönderebilirsiniz.Birden fazla numaraya, tek gönderimde, toplu olarak faks gönderebilirsiniz. \n<br>\n<br><b>Faks Alma \n</b><br>Bulutfon Santralinizde tanımlı her numara üzerinden, herhangi bir ayar yapmadan, size gönderilen faksları otomatik olarak alabilirsiniz. Ayrıca santralinizde tanımlı, istediğiniz bir numarayı, sadece faks sinyali verecek şekilde ayarlayabilirsiniz.Numaranıza gönderilen fakslar, kullanıcı paneli üzerinden tanımlayabileceğiniz E- posta adresine gönderilir. İsterseniz kullanıcı panelimizden de gelen faksları görüntüleyebilirsiniz. \n<br>\n<br><b>E-posta ile Faks Gönderme \n</b><br>Bulutfon’da, yetki verdiğiniz e-posta adresleri üzerinden e-posta atarak faks gönderebilirsiniz.<br></p>\n            </div>\n        </amp-selector>\n    </div>\n\n</section>",
+          "_cid": "qLD1oa9z1D",
+          "_anchor": "tabs2-5",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".underline": {
+              "padding-top": "1rem",
+              "padding-bottom": "1rem",
+              ".line": {
+                "width": "5rem",
+                "height": "3px",
+                "background": "@underlineColor",
+                "display": "inline-block"
+              }
+            },
+            ".mbr-row": {
+              "margin": "0 15px"
+            },
+            ".card": {
+              "padding-right": "10px !important",
+              "padding-left": "10px !important",
+              "@media (max-width: 991px)": {
+                "margin-bottom": "20px"
+              },
+              "display": "flex",
+              "-ms-flex-direction": "column",
+              "flex-direction": "column",
+              "min-width": "0",
+              "border-radius": "0",
+              "width": "100%",
+              "min-height": "1px",
+              ".card-wrapper": {
+                "background": "@cardBg",
+                "padding-top": "3rem",
+                "@media (max-width: 991px)": {
+                  "padding-top": "1rem"
+                },
+                "height": "100%"
+              },
+              "&:hover": {
+                ".card-img": {
+                  "-webkit-filter": "none",
+                  "-moz-filter": "none",
+                  "-ms-filter": "none",
+                  "-o-filter": "none",
+                  "filter": "none",
+                  "transition": "all .5s"
+                }
+              }
+            },
+            ".card-img": {
+              "& when (@grayFilter)": {
+                "-webkit-filter": "grayscale(100%)",
+                "-moz-filter": "grayscale(100%)",
+                "-ms-filter": "grayscale(100%)",
+                "-o-filter": "grayscale(100%)",
+                "filter": "gray"
+              }
+            },
+            ".card-img amp-img": {
+              "border-radius": "50%",
+              "width": "50%",
+              "margin": "auto"
+            },
+            ".card-img amp-img img": {
+              "border-radius": "50%"
+            },
+            ".card-subtitle": {
+              "letter-spacing": "3px",
+              "font-weight": "500"
+            },
+            ".card-title": {
+              "margin": "0",
+              "& when not (@showUnderline)": {
+                "padding-bottom": "1rem"
+              }
+            },
+            ".mbr-text": {
+              "margin": "0"
+            },
+            ".card-box": {
+              "padding": "2rem 2rem 3rem 2rem",
+              "@media (max-width: 991px)": {
+                "padding": "1rem 2rem"
+              }
+            }
+          },
+          "_name": "features9",
+          "_customHTML": "<section class=\"features9 mbr-section\" group=\"Features\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Show Specialty\" name=\"showSpecialty\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Name\" name=\"showName\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Underline\" name=\"showUnderline\" condition=\"showName\">\n        <input type=\"color\" title=\"Underline Color\" name=\"underlineColor\" value=\"#494949\" condition=\"showUnderline &amp;&amp; showName\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked=\"\">\n        <input type=\"checkbox\" title=\"Gray Filter\" name=\"grayFilter\" checked=\"\">\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected=\"\">4</option>\n        </select>\n        <input type=\"color\" title=\"Card BG\" name=\"cardBg\" value=\"#b2ccd2\">\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#efefef\" selected=\"\">\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"card mbr-col-sm-12 mbr-col-md-6\" mbr-class=\"{'mbr-col-lg-4': cardsAmount <= 3,\n                             'mbr-col-lg-3': cardsAmount > 3}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <amp-img src=\"@PROJECT_PATH@/assets/images/how-it-works-header-1-bbbd7c65c4028f5528bfbcec0937bd2e.gif\" layout=\"responsive\" width=\"125\" height=\"125\" alt=\"Mobirise\">\n                            <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/how-it-works-header-1-bbbd7c65c4028f5528bfbcec0937bd2e.gif\" alt=\"Mobirise\" title=\"\">\n                        </amp-img>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"mbr-fonts-style card-subtitle align-center\" mbr-theme-style=\"display-4\" data-app-selector=\".card-subtitle\" mbr-if=\"showSpecialty\">Adım</h4>\n                        <h3 class=\"card-title mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showName\" data-app-selector=\".card-title\">\n                            1\n                        </h3>\n                        <div class=\"underline align-center\" mbr-if=\"showUnderline &amp;&amp; showName\">\n                             <div class=\"line\"></div>\n                        </div>\n                        <p class=\"mbr-text mbr-fonts-style align-center mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                            Yeni bir numara seçin veya mevcut numaranızı taşıyın…\n                        </p>\n                    </div>\n                </div>\n            </div>\n            \n            <div class=\"card mbr-col-sm-12 mbr-col-md-6\" mbr-class=\"{'mbr-col-lg-4': cardsAmount <= 3,\n                             'mbr-col-lg-3': cardsAmount > 3}\" mbr-if=\"cardsAmount > 1\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <amp-img src=\"@PROJECT_PATH@/assets/images/how-it-works-header-2-bb1d8563cf8c1822f4398cc16dc4188e.gif\" layout=\"responsive\" height=\"125\" width=\"125\" alt=\"Mobirise\">\n                            <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/how-it-works-header-2-bb1d8563cf8c1822f4398cc16dc4188e.gif\" alt=\"Mobirise\" title=\"\">\n                        </amp-img>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"mbr-fonts-style card-subtitle align-center\" mbr-theme-style=\"display-4\" data-app-selector=\".card-subtitle\" mbr-if=\"showSpecialty\">Adım</h4>\n                        <h3 class=\"card-title mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showName\" data-app-selector=\".card-title\">\n                            2\n                        </h3>\n                        <div class=\"underline align-center\" mbr-if=\"showUnderline &amp;&amp; showName\">\n                             <div class=\"line\"></div>\n                        </div>\n                        <p class=\"mbr-text mbr-fonts-style align-center mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                            Kendinize özel belirlediğiniz santral karşılama mesajı kaydedin…\n                        </p>\n                    </div>\n                </div>\n            </div>\n        \n            <div class=\"card mbr-col-sm-12 mbr-col-md-6\" mbr-class=\"{'mbr-col-lg-4': cardsAmount <= 3,\n                             'mbr-col-lg-3': cardsAmount > 3}\" mbr-if=\"cardsAmount > 2\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <amp-img src=\"@PROJECT_PATH@/assets/images/how-it-works-header-3-cbfda88fa5211e74356a184eb74291bd.gif\" layout=\"responsive\" height=\"125\" width=\"125\" alt=\"Mobirise\">\n                            <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/how-it-works-header-3-cbfda88fa5211e74356a184eb74291bd.gif\" alt=\"Mobirise\" title=\"\">\n                        </amp-img>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"mbr-fonts-style card-subtitle align-center\" mbr-theme-style=\"display-4\" data-app-selector=\".card-subtitle\" mbr-if=\"showSpecialty\">Adım</h4>\n                        <h3 class=\"card-title mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showName\" data-app-selector=\".card-title\">\n                            3\n                        </h3>\n                        <div class=\"underline align-center\" mbr-if=\"showUnderline &amp;&amp; showName\">\n                             <div class=\"line\"></div>\n                        </div>\n                        <p class=\"mbr-text mbr-fonts-style align-center mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                            Departmanlarınızı, çalışanlarınızı ekleyin…\n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card mbr-col-sm-12 mbr-col-md-6\" mbr-class=\"{'mbr-col-lg-4': cardsAmount <= 3,\n                             'mbr-col-lg-3': cardsAmount > 3}\" mbr-if=\"cardsAmount > 3\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <amp-img src=\"@PROJECT_PATH@/assets/images/how-it-works-header-4-e0509039d060e0d7c79643147e0c4e1b.gif\" layout=\"responsive\" height=\"125\" width=\"125\" alt=\"Mobirise\">\n                            <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/how-it-works-header-4-e0509039d060e0d7c79643147e0c4e1b.gif\" alt=\"Mobirise\" title=\"\">\n                        </amp-img>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"mbr-fonts-style card-subtitle align-center\" mbr-theme-style=\"display-4\" data-app-selector=\".card-subtitle\" mbr-if=\"showSpecialty\">Adım</h4>\n                        <h3 class=\"card-title mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showName\" data-app-selector=\".card-title\">\n                            4\n                        </h3>\n                        <div class=\"underline align-center\" mbr-if=\"showUnderline &amp;&amp; showName\">\n                             <div class=\"line\"></div>\n                        </div>\n                        <p class=\"mbr-text mbr-fonts-style align-center mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                            Her yerden arama, sesli mesaj ve faks almaya başlayın…\n                        </p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qLIAkiFGdI",
+          "_anchor": "features9-a",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-title": {
+              "padding-bottom": "1rem"
+            },
+            ".mbr-section-button": {
+              "padding-top": "1.5rem"
+            },
+            "H2": {
+              "color": "#43818f"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section content1\" group=\"Article\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <!-- <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\"> -->\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#d7eaef\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-container\">\n        <h2 mbr-if=\"showTitle\" class=\"align-center mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-1\">\n            Bulutfon nasıl çalışır?</h2>\n        <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\"><i>Bulutfon abonelerinin ihtiyaçlarını anlar ve bu doğrultuda çözümler sunar.</i></h3>\n        <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n            <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n        </div>\n    </div>\n</section>",
+          "_cid": "qLIBSxO976",
+          "_anchor": "content1-c",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".card": {
+              "display": "flex",
+              "-ms-flex-direction": "column",
+              "flex-direction": "column",
+              "min-width": "0",
+              "width": "100%",
+              "min-height": "1px",
+              ".card-wrapper": {
+                "padding-right": "2rem",
+                "padding-left": "2rem"
+              }
+            },
+            ".card-title": {
+              "margin": "0"
+            },
+            ".card-box": {
+              "padding-top": "2rem"
+            },
+            ".first-column .card-wrapper": {
+              "border-left": "1px solid @linesColor"
+            },
+            ".card-pb .card": {
+              "padding-bottom": "60%"
+            },
+            ".second-column": {
+              "border-left": "1px solid @linesColor",
+              ".card": {
+                "padding-top": "60%",
+                ".card-wrapper": {
+                  "border-right": "1px solid @linesColor"
+                }
+              }
+            },
+            "amp-img": {
+              "width": "100%"
+            },
+            ".amp-notsupported .temp-amp-sizer": {
+              "position": "absolute"
+            },
+            "@media (max-width: 767px)": {
+              ".card": {
+                "margin-bottom": "2rem",
+                "padding-bottom": "0",
+                ".card-wrapper": {
+                  "border-left": "1px solid @linesColor",
+                  "border-right": "none !important"
+                }
+              },
+              ".second-column": {
+                "border": "none"
+              }
+            }
+          },
+          "_name": "features12",
+          "_customHTML": "<section class=\"features12 mbr-section\" group=\"Features\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"1\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked=\"\">\n        <select title=\"Columns Count\" name=\"columnsCount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\" selected=\"\">2</option>\n        </select>\n        <input type=\"range\" inline=\"\" title=\"Column 1 Items\" name=\"column1Items\" min=\"1\" max=\"4\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline=\"\" title=\"Column 2 Items\" name=\"column2Items\" min=\"1\" max=\"4\" step=\"1\" value=\"2\">\n        <input type=\"color\" title=\"Lines Color\" name=\"linesColor\" value=\"#cccccc\">\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected=\"\">\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"column first-column mbr-col-sm-12 mbr-col-md-6\" mbr-class=\"{'card-pb': columnsCount == 2}\" mbr-list=\"\" mbr-list-grow=\"column1Items\">\n                <div class=\"card\">\n                    <div class=\"card-wrapper\">\n                        <div class=\"card-img\">\n                            <amp-img src=\"@PROJECT_PATH@/assets/images/how-it-works-ivr-welcome-message-4cd81ff65f5d82f38febd3a1630395ef.png\" layout=\"responsive\" width=\"475\" height=\"475\" alt=\"Mobirise\">\n                                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/how-it-works-ivr-welcome-message-4cd81ff65f5d82f38febd3a1630395ef.png\" alt=\"Mobirise\" title=\"\">\n                            </amp-img>\n                        </div>\n                        <div class=\"card-box\">\n                            <h4 class=\"card-title card-title-fc mbr-fonts-style align-left\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title-fc\">“Satış için 1, teknik destek için 2, muhasebe için 3 tuşlayınız.”</h4>\n                            <p class=\"mbr-text-fc mbr-fonts-style align-left\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text-fc\">\n                                <br>Karşılama menüsü (IVR – Robot Operatör) oluşturabilir, tuşlanan numaralara göre aramayı dahililere veya çağrı gruplarına yönlendirebilir, bu ayarları istediğiniz zaman size özel kontrol panelinden değiştirebilirsiniz.\n                            </p>\n                        </div>\n                    </div>\n                </div>\n\n                <div class=\"card\">\n                    <div class=\"card-wrapper\">\n                        <div class=\"card-img\">\n                            <amp-img src=\"@PROJECT_PATH@/assets/images/how-it-works-old-pbx-system-4b4e1251c7880a59ce4b78f007d5bd5f-400x399.png\" layout=\"responsive\" width=\"475.187969924812\" height=\"474\" alt=\"Mobirise\">\n                                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/how-it-works-old-pbx-system-4b4e1251c7880a59ce4b78f007d5bd5f-400x399.png\" alt=\"Mobirise\" title=\"\">\n                            </amp-img>\n                        </div>\n                        <div class=\"card-box\">\n                            <h4 class=\"card-title card-title-fc mbr-fonts-style align-left\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title-fc\">Kurulum ve teknik destek maliyeti yok<br><br></h4>\n                            <p class=\"mbr-text-fc mbr-fonts-style align-left\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text-fc\">Bulutfon, bulut tabanlı bir santral sistemidir. Fiziksel bir santral cihazı veya yazılımı satın almanız gerekmez, sanal santralinizi kontrol panelinizden kendiniz yönetebilirsiniz, bu nedenle teknik destek maliyeti yoktur. Kurulumu ücretsizdir.\n<br>\n<br>Bulutfon’dan yeni bir konumdan bağımsız 0850 numara alabilir veya yıllardır kullandığınız, müşterileriniz tarafından bilinen mevcut numara(ları)nızı Bulutfon’a taşıyabilirsiniz</p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            \n            <div class=\"column second-column mbr-col-sm-12 mbr-col-md-6\" mbr-list=\"\" mbr-list-grow=\"column2Items\" mbr-if=\"columnsCount == 2\">\n                <div class=\"card\">\n                    <div class=\"card-wrapper\">\n                        <div class=\"card-img\">\n                            <amp-img src=\"@PROJECT_PATH@/assets/images/how-it-works-add-extensions-440d55578eb1f28aebce03d4b028d953.png\" layout=\"responsive\" height=\"474\" width=\"474\" alt=\"Mobirise\">\n                                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/how-it-works-add-extensions-440d55578eb1f28aebce03d4b028d953.png\" alt=\"Mobirise\" title=\"\">\n                            </amp-img>\n                        </div>\n                        <div class=\"card-box\">\n                            <h4 class=\"card-title card-title-sc mbr-fonts-style align-left\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title-sc\">Yeni bir numara seçin ya da mevcut numaranızı Bulutfon’a taşıyın.<br><br></h4>\n                            <p class=\"mbr-text-sc mbr-fonts-style align-left\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text-sc\">\n                                Bulutfon’dan yeni bir konumdan bağımsız 0850 numara alabilir veya yıllardır kullandığınız, müşterileriniz tarafından bilinen mevcut numara(ları)nızı Bulutfon’a taşıyabilirsiniz\n                            </p>\n                        </div>\n                    </div>\n                </div>\n\n                <div class=\"card\">\n                    <div class=\"card-wrapper\">\n                        <div class=\"card-img\">\n                            <amp-img src=\"@PROJECT_PATH@/assets/images/how-it-works-save-money-960d38d4468ca085252a30bc270ce326.png\" layout=\"responsive\" height=\"474\" width=\"474\" alt=\"Mobirise\">\n                                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/how-it-works-save-money-960d38d4468ca085252a30bc270ce326.png\" alt=\"Mobirise\" title=\"\">\n                            </amp-img>\n                        </div>\n                        <div class=\"card-box\">\n                            <h4 class=\"card-title card-title-sc mbr-fonts-style align-left\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title-sc\">Avantajlı görüşme ücretleri ile maliyetlerinizi düşürün.</h4>\n                            <p class=\"mbr-text-sc mbr-fonts-style align-left\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text-sc\"></p><div><br></div>\n                                Bulutfon’da kuruşu, kuruşuna konuşursunuz. Kontör atış periyotu yoktur, konuşmalar saniyelik ücretlendirilir, ucuza görüşmek için taahhüt vermek, her yöne paketi almak zorunda kalmazsınız. Ne kadar konuşacağınıza siz karar verirsiniz.\n                            <p></p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            \n        </div>\n    </div>\n</section>",
+          "_cid": "qLIB6eQjZW",
+          "_anchor": "features12-b",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".google-map": {
+              "height": "25rem",
+              "position": "relative",
+              "width": "100%",
+              "iframe": {
+                "height": "100%",
+                "width": "100%"
+              },
+              "[data-state-details]": {
+                "color": "#6b6763",
+                "font-family": "Montserrat",
+                "height": "1.5em",
+                "margin-top": "-0.75em",
+                "padding-left": "1.25rem",
+                "padding-right": "1.25rem",
+                "position": "absolute",
+                "text-align": "center",
+                "top": "50%",
+                "width": "100%"
+              },
+              "&[data-state]": {
+                "background": "#e9e5dc"
+              },
+              "&[data-state=\"loading\"]": {
+                "[data-state-details]": {
+                  "display": "none"
+                },
+                "&::after": {}
+              }
+            },
+            ".map-placeholder": {
+              "display": "none"
+            },
+            "h4": {
+              "padding-top": "5rem",
+              "color": "#767676",
+              "text-align": "center"
+            },
+            ".mbr-section-title": {
+              "padding-bottom": "3rem"
+            }
+          },
+          "_name": "map2",
+          "_customHTML": "<section class=\"map\" group=\"Maps\" plugins=\"amp-main,amp-iframe\">\n\n    <mbr-parameters>\n    <!-- Block of parameters for component -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"4\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"4\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#2e5058\">\n        <input type=\"map\" title=\"Map\" name=\"googleMap\" place-id=\"ChIJx_5AWDu3yhQR6MbQ2EFhQHg\" value=\"semta elektrik perpa\">\n    <!-- End block of parameters -->\n    </mbr-parameters>\n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"map-title mbr-col-sm-12 mbr-col-md-12 align-center\">\n                <h2 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .map-title\">\n                    Map Title\n                </h2>\n            </div>\n            <div class=\"mbr-col-md-12 map-box\">\n                <div class=\"google-map\" mbr-map=\"googleMap\"></div>\n                <div class=\"map-placeholder\">\n                    <h4 placeholder>Google Map Initialization...</h4>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qLD1u8BFsr",
+          "_anchor": "map2-8",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".row-links": {
+              "width": "100%",
+              "justify-content": "center"
+            },
+            ".social-row": {
+              "width": "100%",
+              "justify-content": "center"
+            },
+            ".foot-menu": {
+              "list-style": "none",
+              "display": "flex",
+              "justify-content": "center",
+              "flex-wrap": "wrap",
+              "padding": "0",
+              "li": {
+                "padding": "0 1rem 1rem 1rem",
+                "p": {
+                  "margin": "0"
+                }
+              },
+              "margin-bottom": "0"
+            },
+            ".social-list": {
+              "padding-left": "0",
+              "& when (@showCopyright)": {
+                "padding-bottom": "1rem"
+              },
+              "margin-bottom": "0",
+              "list-style": "none",
+              "display": "flex",
+              "flex-wrap": "wrap",
+              "justify-content": "flex-end",
+              "-webkit-justify-content": "flex-end",
+              ".soc-item": {
+                "margin": "0 .5rem"
+              },
+              "a": {
+                "margin": "0",
+                "opacity": ".5",
+                "-webkit-transition": ".2s linear",
+                "transition": ".2s linear",
+                "&:hover": {
+                  "opacity": "1"
+                },
+                ".mbr-iconfont": {
+                  "font-size": "~\"@{iconsSize}px\"",
+                  "color": "@iconsColor"
+                }
+              },
+              "@media (max-width: 767px)": {
+                "justify-content": "center",
+                "-webkit-justify-content": "center"
+              }
+            },
+            ".row-copiright": {
+              "word-break": "break-word",
+              "width": "100%",
+              "p": {
+                "width": "100%",
+                "padding": "0",
+                "margin": "0"
+              }
+            },
+            "foot-menu-item": {
+              "color": "#bbbbbb"
+            }
+          },
+          "_name": "footer4",
+          "_customHTML": "<section class=\"footer4\" group=\"Footers\" plugins=\"amp-main\" global>\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n\n        <input type=\"range\" inline title=\"Menu Items\" name=\"menuItems\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Social Items\" name=\"socialItems\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Icons Size\" name=\"iconsSize\" min=\"16\" max=\"100\" step=\"1\" value=\"35\" condition=\"socialItems > 0\">\n        <input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#efefef\" condition=\"socialItems > 0\">\n        <input type=\"checkbox\" title=\"Show Copyright\" name=\"showCopyright\" checked>\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background6.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#232323\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"mbr-row row-links\" mbr-if=\"menuItems > 0\">\n                <ul class=\"foot-menu\" mbr-list mbr-list-grow=\"menuItems\">\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\"foot-menu-item\">\n                        <a class=\"text-white mbr-bold\" href=\"index.html#features13-3\" target=\"_blank\">Anasayfa</a>\n                    </li><li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\"foot-menu-item\">\n                        <a class=\"text-white mbr-bold\" href=\"index.html#features9-a\" target=\"_blank\">Fiyatlar</a>\n                    </li>\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\"foot-menu-item\">\n                        <a class=\"text-white mbr-bold\" href=\"index.html#footer4-9\" target=\"_blank\">İletişim</a>\n                    </li>\n                    \n                    \n                </ul>\n            </div>\n            <div class=\"mbr-row social-row\" mbr-if=\"socialItems > 0\">\n                <div mbr-list mbr-list-grow=\"socialItems\" class=\"social-list align-right\">\n                    <div class=\"soc-item\">\n                        <a href=\"https://twitter.com/semtasoft\" target=\"_blank\">\n                            <span mbr-icon class=\"fa fa-twitter mbr-iconfont\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"https://www.facebook.com/pages/semtasoftware\" target=\"_blank\">\n                            <span mbr-icon class=\"fa fa-facebook-f mbr-iconfont\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"https://www.youtube.com/semtasoft\" target=\"_blank\">\n                            <span mbr-icon class=\"fa fa-youtube-play mbr-iconfont\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"https://instagram.com/semtasoft\" target=\"_blank\">\n                            <span mbr-icon class=\"fa fa-instagram mbr-iconfont\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"https://plus.google.com/semtasoft\" target=\"_blank\">\n                            <span mbr-icon class=\"fa fa-google-plus mbr-iconfont\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"https://www.behance.net/semtasoft\" target=\"_blank\">\n                            <span mbr-icon class=\"fa fa-behance mbr-iconfont\"></span>\n                        </a>\n                    </div>\n                </div>\n            </div>\n            <div class=\"mbr-row row-copiright\" mbr-if=\"showCopyright\">\n                <p class=\"mbr-text mbr-fonts-style mbr-white align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    © Copyright 2018 Semtasoft - <br>TELEFON: 0212.210.96.92<br>FAX: 0212.210.96.95<br>E-mail: info@semtabilgisayar.com</p>\n            </div>\n    </div>\n</section>",
+          "_cid": "qLD1zmiafe",
+          "_anchor": "footer4-9",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": true,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "bulutfonsemtabilgisayar.html": {
+      "settings": {
+        "title": "Basvuru - Bulutfon Santral Kurulumu (Semta Bilgisayar - Semtabilgisayar)",
+        "meta_descr": "Bulutfon sanal santral\nSemtabilgisayar",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": "",
+        "order": 1
+      },
+      "components": [
+        {
+          "_styles": {
+            "amp-sidebar": {
+              "min-width": "260px!important",
+              "z-index": "1050!important",
+              "background-color": "@menuBgColor"
+            },
+            "amp-sidebar.open:after": {
+              "content": "''",
+              "position": "absolute",
+              "top": "0",
+              "left": "0",
+              "bottom": "0",
+              "right": "0",
+              "background-color": "red"
+            },
+            ".open": {
+              "transform": "translateX(0%) !important",
+              "display": "block!important"
+            },
+            ".builder-sidebar": {
+              "background-color": "@menuBgColor",
+              "position": "relative",
+              "height": "100vh",
+              "z-index": "1030",
+              "padding": "1rem 2rem",
+              "max-width": "20rem"
+            },
+            ".headerbar": {
+              "display": "flex",
+              "flex-direction": "column",
+              "justify-content": "center",
+              "padding": ".5rem 1rem",
+              "min-height": "70px",
+              "align-items": "center",
+              "background": "@menuBgColor",
+              "&.sticky-nav": {
+                "position": "fixed",
+                "z-index": "1000",
+                "width": "100%"
+              }
+            },
+            "button.sticky-but": {
+              "position": "fixed"
+            },
+            ".brand": {
+              "display": "flex",
+              "align-items": "center",
+              "align-self": "flex-start",
+              "padding-right": "30px",
+              "p": {
+                "margin": "0",
+                "padding": "0"
+              }
+            },
+            ".brand-name": {
+              "color": "#ffffff"
+            },
+            ".sidebar": {
+              "padding": "1rem 0",
+              "margin": "0"
+            },
+            ".sidebar > li": {
+              "list-style": "none",
+              "display": "flex",
+              "flex-direction": "column"
+            },
+            ".sidebar a": {
+              "display": "block",
+              "text-decoration": "none",
+              "margin-bottom": "10px"
+            },
+            ".close-sidebar": {
+              "width": "30px",
+              "height": "30px",
+              "position": "relative",
+              "cursor": "pointer",
+              "background-color": "transparent",
+              "border": "none",
+              "&:focus": {
+                "outline": "2px auto @primaryColor"
+              },
+              "span": {
+                "position": "absolute",
+                "left": "0",
+                "width": "30px",
+                "height": "2px",
+                "border-right": "5px",
+                "background-color": "@hamburgerColor",
+                "&:nth-child(1)": {
+                  "transform": "rotate(45deg)"
+                },
+                "&:nth-child(2)": {
+                  "transform": "rotate(-45deg)"
+                }
+              }
+            },
+            "@media (min-width: 992px)": {
+              "& .brand-name": {
+                "min-width": "8rem"
+              },
+              "& .builder-sidebar": {
+                "margin-left": "auto",
+                ".sidebar li": {
+                  "flex-direction": "row",
+                  "flex-wrap": "wrap",
+                  "a": {
+                    "padding": ".5rem",
+                    "margin": "0"
+                  }
+                }
+              },
+              "& .builder-overlay": {
+                "display": "none !important"
+              }
+            },
+            ".hamburger": {
+              "position": "absolute",
+              "top": "25px",
+              "& when (@showLogo)": {
+                "@media (min-width: 768px)": {
+                  "top": "calc(0.5rem ~\"+\" @logoHeight ~\"*\" 0.5px ~\"-\" 10px)"
+                }
+              },
+              "right": "20px",
+              "margin-left": "auto",
+              "width": "30px",
+              "height": "20px",
+              "background": "none",
+              "border": "none",
+              "cursor": "pointer",
+              "z-index": "1000",
+              "&:focus": {
+                "outline": "none"
+              },
+              "span": {
+                "position": "absolute",
+                "right": "0",
+                "width": "30px",
+                "height": "2px",
+                "border-right": "5px",
+                "background-color": "@hamburgerColor",
+                "&:nth-child(1)": {
+                  "top": "0",
+                  "transition": "all .2s"
+                },
+                "&:nth-child(2)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(3)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(4)": {
+                  "top": "16px",
+                  "transition": "all .2s"
+                }
+              }
+            },
+            "amp-img": {
+              "height": "~\"@{logoHeight}px\"",
+              "width": "~\"@{logoWidth}px\"",
+              "margin-right": "1rem",
+              "display": "flex",
+              "align-items": "center",
+              "@media (max-width: 768px)": {
+                "max-height": "55px",
+                "max-width": "55px"
+              }
+            }
+          },
+          "_name": "menu1",
+          "_customHTML": "<section class=\"menu\" group=\"Menu\" plugins=\"amp-main,amp-sidebar\" global=\"\" once=\"menu\" always-top=\"\" position-absolute=\"\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked=\"\">\n        <input type=\"range\" title=\"Logo Height\" inline=\"\" name=\"logoHeight\" min=\"55\" max=\"220\" value=\"90\" step=\"1\">\n        <input type=\"range\" title=\"Logo Width\" inline=\"\" name=\"logoWidth\" min=\"55\" max=\"220\" value=\"220\" step=\"1\">\n\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\">\n        <input type=\"checkbox\" title=\"Show Links\" name=\"showLinks\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked=\"\">\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\">\n        <select title=\"Sidebar Side\" name=\"sidebarSide\">\n            <option value=\"left\">Left</option>\n            <option value=\"right\" selected=\"\">Right</option>\n        </select>\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#2e5058\">\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <nav class=\"headerbar\" mbr-class=\"{'sticky-nav':sticky}\">\n      <div class=\"brand\">\n          <span mbr-if=\"showLogo\" class=\"brand-logo\">\n              <amp-img src=\"@PROJECT_PATH@/assets/images/semtalogo2018-beyazkirmizi-1-2487x1070.png\" layout=\"responsive\" width=\"206.73448626653104\" height=\"90\" alt=\"Semtabiligsayar\">\n                  <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/semtalogo2018-beyazkirmizi-1-2487x1070.png\" alt=\"Semtabiligsayar\" title=\"\">\n              </amp-img>\n          </span>\n          <p mbr-text=\"\" mbr-theme-style=\"display-2\" mbr-if=\"showBrand\" class=\"brand-name mbr-fonts-style\" data-app-selector=\".brand-name\">SemtaBilgisayar</p>\n      </div>\n    </nav>\n    <amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n        <div class=\"builder-sidebar\" id=\"builder-sidebar\">\n            <button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n                <span></span>\n                <span></span>\n            </button>\n\n            <div mbr-menu=\"\" class=\"sidebar mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showLinks\"><a class=\"text-white\" href=\"index.html#header5-1\">ANASAYFA</a>\n              <a class=\"text-white\" href=\"index.html#features9-o\">FİYATLAR</a>\n              <a class=\"text-white\" href=\"index.html#footer4-9\">İLETİŞİM</a></div>\n            \n            <div mbr-if=\"showButtons\" mbr-buttons=\"\" mbr-theme-style=\"display-4\" class=\"navbar-buttons mbr-section-btn align-center\"><a class=\"btn btn-sm btn-success\" href=\"bulutfonbasvuru.html\">BAŞVURU</a></div>\n        </div>\n    </amp-sidebar>\n    <button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-class=\"{'sticky-but':sticky}\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n    </button>\n</section>",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_cid": "qLIQ7BV3vN",
+          "_anchor": "menu1-d",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-title": {
+              "padding-bottom": "1rem"
+            },
+            ".mbr-section-button": {
+              "padding-top": "1.5rem"
+            },
+            "H2": {
+              "color": "#43818f"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section content1\" group=\"Article\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <!-- <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\"> -->\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#d7eaef\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-container\">\n        <h2 mbr-if=\"showTitle\" class=\"align-center mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-1\">\n            Bulutfon nasıl çalışır?</h2>\n        <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\"><i>Bulutfon abonelerinin ihtiyaçlarını anlar ve bu doğrultuda çözümler sunar.</i></h3>\n        <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n            <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n        </div>\n    </div>\n</section>",
+          "_cid": "qLIQ7GiOkR",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content1-i"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            },
+            ".area": {
+              "width": "100%"
+            },
+            "label.input-label": {
+              "display": "flex",
+              "flex-direction": "column",
+              "max-width": "33%",
+              "padding": ".5rem",
+              "margin": "0"
+            },
+            "label.area": {
+              "padding": ".5rem"
+            },
+            "textarea": {
+              "width": "100%",
+              "max-width": "100%"
+            },
+            "@media (max-width: 992px)": {
+              "label.input-label": {
+                "max-width": "100%"
+              }
+            }
+          },
+          "_name": "form2",
+          "_customHTML": "<section class=\"form2\" group=\"Forms\" plugins=\"amp-main,amp-form,amp-mustache\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected> \n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <h2 mbr-if=\"showTitle\" class=\"align-center mbr-fonts-style\" mbr-theme-style=\"display-2\">Bize Aşağıdaki Form yardımıyla ulaşabilirsiniz</h2>\n        <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">\n            Numaranızı bırakın, sizi arayalım</h3>\n\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div mbr-form class=\"mbr-col-lg-6  mbr-col-md-10 \">\n                <form class=\"mbr-form\" action=\"semta@semta.com.tr\" method=\"post\" name=\"Mobirise Form\" target=\"_top\" novalidate>\n                    <div submit-success>\n                        <template data-form-alert type=\"amp-mustache\">Teşekkürler!</template>\n                    </div>\n                    <div submit-error>\n                        <template data-form-alert type=\"amp-mustache\">Teşekkürler!</template>\n                    </div>\n                    <div class=\"fieldset\">\n                        <label class=\"input-label\">\n                            <input type=\"hidden\" name=\"form[data][1][0]\" value=\"Name\">\n                            <input type=\"text\" name=\"form[data][1][1]\" data-form-field=\"Name\" placeholder=\"Adınız Soyadınız\" required>\n                        </label>\n                        <label class=\"input-label\">\n                            <input type=\"hidden\" name=\"form[data][2][0]\" value=\"Phone\">\n                            <input type=\"phone\" name=\"form[data][2][1]\" data-form-field=\"Phone\" placeholder=\"Telefon Numaranız\" required>\n                        </label>\n                        <label class=\"input-label\">\n                            <input type=\"hidden\" name=\"form[data][0][0]\" value=\"Email\">\n                            <input type=\"email\" name=\"form[data][0][1]\" data-form-field=\"Email\" placeholder=\"Email Adresiniz\" required>\n                        </label>\n                        <label class=\"area\">\n                            <input type=\"hidden\" name=\"form[data][3][0]\" value=\"Message\">\n                            <textarea name=\"form[data][3][1]\" rows=\"7\" data-form-field=\"Message\" placeholder=\"Mesajınız\"></textarea>\n                        </label>\n                        <span mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\" class=\"input-group-btn\"><a type=\"submit\" class=\"btn btn-form btn-danger\">FORMU GÖNDER</a></span>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qLITKzL5XF",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "form2-n"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".google-map": {
+              "height": "25rem",
+              "position": "relative",
+              "width": "100%",
+              "iframe": {
+                "height": "100%",
+                "width": "100%"
+              },
+              "[data-state-details]": {
+                "color": "#6b6763",
+                "font-family": "Montserrat",
+                "height": "1.5em",
+                "margin-top": "-0.75em",
+                "padding-left": "1.25rem",
+                "padding-right": "1.25rem",
+                "position": "absolute",
+                "text-align": "center",
+                "top": "50%",
+                "width": "100%"
+              },
+              "&[data-state]": {
+                "background": "#e9e5dc"
+              },
+              "&[data-state=\"loading\"]": {
+                "[data-state-details]": {
+                  "display": "none"
+                },
+                "&::after": {}
+              }
+            },
+            ".map-placeholder": {
+              "display": "none"
+            },
+            "h4": {
+              "padding-top": "5rem",
+              "color": "#767676",
+              "text-align": "center"
+            },
+            ".mbr-section-title": {
+              "padding-bottom": "3rem"
+            }
+          },
+          "_name": "map2",
+          "_customHTML": "<section class=\"map\" group=\"Maps\" plugins=\"amp-main,amp-iframe\">\n\n    <mbr-parameters>\n    <!-- Block of parameters for component -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"4\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"4\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#2e5058\">\n        <input type=\"map\" title=\"Map\" name=\"googleMap\" place-id=\"ChIJx_5AWDu3yhQR6MbQ2EFhQHg\" value=\"semta elektrik perpa\">\n    <!-- End block of parameters -->\n    </mbr-parameters>\n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"map-title mbr-col-sm-12 mbr-col-md-12 align-center\">\n                <h2 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .map-title\">\n                    Map Title\n                </h2>\n            </div>\n            <div class=\"mbr-col-md-12 map-box\">\n                <div class=\"google-map\" mbr-map=\"googleMap\"></div>\n                <div class=\"map-placeholder\">\n                    <h4 placeholder>Google Map Initialization...</h4>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qLIQ7HUJ0t",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "map2-k"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".row-links": {
+              "width": "100%",
+              "justify-content": "center"
+            },
+            ".social-row": {
+              "width": "100%",
+              "justify-content": "center"
+            },
+            ".foot-menu": {
+              "list-style": "none",
+              "display": "flex",
+              "justify-content": "center",
+              "flex-wrap": "wrap",
+              "padding": "0",
+              "li": {
+                "padding": "0 1rem 1rem 1rem",
+                "p": {
+                  "margin": "0"
+                }
+              },
+              "margin-bottom": "0"
+            },
+            ".social-list": {
+              "padding-left": "0",
+              "& when (@showCopyright)": {
+                "padding-bottom": "1rem"
+              },
+              "margin-bottom": "0",
+              "list-style": "none",
+              "display": "flex",
+              "flex-wrap": "wrap",
+              "justify-content": "flex-end",
+              "-webkit-justify-content": "flex-end",
+              ".soc-item": {
+                "margin": "0 .5rem"
+              },
+              "a": {
+                "margin": "0",
+                "opacity": ".5",
+                "-webkit-transition": ".2s linear",
+                "transition": ".2s linear",
+                "&:hover": {
+                  "opacity": "1"
+                },
+                ".mbr-iconfont": {
+                  "font-size": "~\"@{iconsSize}px\"",
+                  "color": "@iconsColor"
+                }
+              },
+              "@media (max-width: 767px)": {
+                "justify-content": "center",
+                "-webkit-justify-content": "center"
+              }
+            },
+            ".row-copiright": {
+              "word-break": "break-word",
+              "width": "100%",
+              "p": {
+                "width": "100%",
+                "padding": "0",
+                "margin": "0"
+              }
+            },
+            "foot-menu-item": {
+              "color": "#bbbbbb"
+            }
+          },
+          "_name": "footer4",
+          "_customHTML": "<section class=\"footer4\" group=\"Footers\" plugins=\"amp-main\" global>\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n\n        <input type=\"range\" inline title=\"Menu Items\" name=\"menuItems\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Social Items\" name=\"socialItems\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Icons Size\" name=\"iconsSize\" min=\"16\" max=\"100\" step=\"1\" value=\"35\" condition=\"socialItems > 0\">\n        <input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#efefef\" condition=\"socialItems > 0\">\n        <input type=\"checkbox\" title=\"Show Copyright\" name=\"showCopyright\" checked>\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background6.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#232323\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"mbr-row row-links\" mbr-if=\"menuItems > 0\">\n                <ul class=\"foot-menu\" mbr-list mbr-list-grow=\"menuItems\">\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\"foot-menu-item\">\n                        <a class=\"text-white mbr-bold\" href=\"index.html#features13-3\" target=\"_blank\">Anasayfa</a>\n                    </li><li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\"foot-menu-item\">\n                        <a class=\"text-white mbr-bold\" href=\"index.html#features9-a\" target=\"_blank\">Fiyatlar</a>\n                    </li>\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\"foot-menu-item\">\n                        <a class=\"text-white mbr-bold\" href=\"index.html#footer4-9\" target=\"_blank\">İletişim</a>\n                    </li>\n                    \n                    \n                </ul>\n            </div>\n            <div class=\"mbr-row social-row\" mbr-if=\"socialItems > 0\">\n                <div mbr-list mbr-list-grow=\"socialItems\" class=\"social-list align-right\">\n                    <div class=\"soc-item\">\n                        <a href=\"https://twitter.com/semtasoft\" target=\"_blank\">\n                            <span mbr-icon class=\"fa fa-twitter mbr-iconfont\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"https://www.facebook.com/pages/semtasoftware\" target=\"_blank\">\n                            <span mbr-icon class=\"fa fa-facebook-f mbr-iconfont\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"https://www.youtube.com/semtasoft\" target=\"_blank\">\n                            <span mbr-icon class=\"fa fa-youtube-play mbr-iconfont\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"https://instagram.com/semtasoft\" target=\"_blank\">\n                            <span mbr-icon class=\"fa fa-instagram mbr-iconfont\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"https://plus.google.com/semtasoft\" target=\"_blank\">\n                            <span mbr-icon class=\"fa fa-google-plus mbr-iconfont\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"https://www.behance.net/semtasoft\" target=\"_blank\">\n                            <span mbr-icon class=\"fa fa-behance mbr-iconfont\"></span>\n                        </a>\n                    </div>\n                </div>\n            </div>\n            <div class=\"mbr-row row-copiright\" mbr-if=\"showCopyright\">\n                <p class=\"mbr-text mbr-fonts-style mbr-white align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    © Copyright 2018 Semtasoft - <br>TELEFON: 0212.210.96.92<br>FAX: 0212.210.96.95<br>E-mail: info@semtabilgisayar.com</p>\n            </div>\n    </div>\n</section>",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_cid": "qLIQ7JCgHC",
+          "_anchor": "footer4-l",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}

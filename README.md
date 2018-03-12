@@ -1,0 +1,2 @@
+# semtabilgisayar
+GitHub Pages
